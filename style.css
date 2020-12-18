@@ -5,6 +5,7 @@
 }
 
 :root {
+  /* BACKGROUND COLORS */
   --light-color1: #fcf8ec;
   --light-color2: #d0e8f2;
   --light-color3: #79a3b1;
@@ -13,16 +14,25 @@
   --dark-color2: #0f4c75;
   --dark-color3: #3282b8;
   --dark-color4: #bbe1fa;
+  --bc: #ff00ff;
+
+  /* TYPOGRAPHY */
   --ff-body: Helvetica, sans-serif;
   --ff-logo: "Pacifico", sans-serif;
-  --bc: #ff00ff;
-  /* border: 2px solid var(--bc); */
+
+  /* Font sizes */
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
+
+  /* BACKGROUND AND BORDER */
+  /* border: 2px solid var(--bc); */
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
+/* GENERAL */
 html {
   scroll-behavior: smooth;
 }
@@ -31,7 +41,7 @@ p,
 h1,
 h2,
 h3 {
-  margin-top: 1;
+  margin-top: 0;
   line-height: 1;
 }
 
@@ -58,8 +68,147 @@ body {
   padding: 0;
   font-family: var(--ff-body);
   background-color: var(--light-color1);
-  border: 2px solid var(--bc);
-  display: grid;
-  grid-template-rows: 10% 80% 10%;
-  grid-template-columns: 10% 80% 10%;
+  /* border: 2px solid var(--bc); */
+}
+
+/* HEADER */
+
+header {
+  background-color: yellowgreen;
+  /* border: 2px solid var(--bc); */
+}
+
+/* MAIN CONTENT -- HOME */
+
+.mainContainer {
+  width: 60%;
+  margin: auto;
+  /* border: 2px solid var(--bc); */
+}
+
+.profilePic {
+  background-color: greenyellow;
+  max-width: 100%;
+  height: auto;
+  padding: 0.2em;
+}
+
+.profilePic:hover {
+  box-shadow: var(--bs);
+}
+
+.homeContent {
+  text-align: initial;
+  padding: 0.2em;
+}
+
+.jokesApi {
+  background-color: green;
+  height: 400px;
+  padding: 0.2em;
+}
+
+/* MAIN CONTENT -- BLOG */
+
+.blogHeading {
+  text-align: center;
+  font-size: var(--fs-h2);
+}
+
+.blogCard {
+  margin-bottom: 5px;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.blogCard:last-of-type {
+  border-bottom: 2px solid white;
+}
+
+.blogImage {
+  background-color: #1b262c;
+  max-width: 100%;
+  height: auto;
+}
+
+.blogCardTitle {
+  font-size: var(--fs-h3);
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+.blogCardText {
+  text-align: start;
+  font-size: 12px;
+  padding-left: 5px;
+  margin-top: 0;
+}
+.blogCardTopic {
+  background-color: yellow;
+  border: 2px solid black;
+  width: 80px;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  display: inline-block;
+  margin: 5px;
+}
+
+/* BLOG - DETAIL PAGE */
+
+.blogDetailImage {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.blogDetailContent {
+  padding: 10px;
+}
+
+/* WORK */
+
+.coaouselCardImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.techStack {
+  border-top: 1px solid black;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.carouselCardTechMentions {
+  display: inline-block;
+  background-color: #d0f1f2;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 2px;
+}
+
+.carouselSlider {
+  margin-top: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--light-color2);
+  color: black;
+  text-align: center;
+  padding: 0.5em;
+}
+
+/* CUSTOM STYLING */
+.logoNameStyle {
+  font-family: var(--ff-logo);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 300px) {
+  .mainContainer {
+    width: 90%;
+  }
 }
